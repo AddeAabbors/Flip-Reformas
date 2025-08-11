@@ -5,71 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flip Reformas · Milla Padua — Reformas criativas na Zona Sul do Rio</title>
   <meta name="description" content="A arquiteta Milla Padua transforma apartamentos cansados em lares incríveis na Zona Sul do Rio. Conheça os Flips: Vistão, Mofadão, Selva e muito mais." />
-  <meta name="theme-color" content="#111827" />
+  <meta name="theme-color" content="#fef3c7" />
   <meta property="og:title" content="Flip Reformas · Milla Padua" />
   <meta property="og:description" content="Reformas completas e criativas que resgatam apartamentos em condições ruins e viram lares de verdade." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <style>
     :root{
-      --bg:#0b0f16; /* quase preto azulado */
-      --ink:#e5e7eb; /* cinza claro */
-      --muted:#94a3b8; /* slate */
-      --brand:#ff5a5f; /* tom quente, memorável */
-      --card:#111827; /* fundo de cards */
-      --accent:#22c55e; /* micro realce */
+      /* Paleta praia clara */
+      --bg:#fff7ed;         /* areia clara */
+      --bg-2:#fefce8;       /* areia iluminada */
+      --ink:#0b1320;        /* azul marinho escuro p/ texto */
+      --muted:#475569;      /* slate médio */
+      --brand:#14b8a6;      /* água do mar (teal-500) */
+      --brand-2:#22d3ee;    /* água cristalina (cyan-400) */
+      --sun:#f59e0b;        /* sol */
+      --coral:#fb7185;      /* coral */
+      --card:#ffffff;       /* cartões claros */
+      --line:rgba(15,23,42,.08);
       --radius:20px;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --shadow:0 8px 28px rgba(2,6,23,.08);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b0f16 0%,#0d1522 100%);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg) 0%, var(--bg-2) 100%);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block;border-radius:calc(var(--radius) - 6px)}
     .wrap{max-width:1120px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;backdrop-filter:saturate(1.2) blur(8px);background:rgba(11,15,22,.65);z-index:50;border-bottom:1px solid rgba(255,255,255,.06)}
+
+    header{position:sticky;top:0;backdrop-filter:saturate(1.2) blur(8px);background:rgba(255,255,255,.7);z-index:50;border-bottom:1px solid var(--line)}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:40px;height:40px;border-radius:12px;background:conic-gradient(from 180deg,var(--brand),#ffb199 50%,#ffd6cc);box-shadow:var(--shadow)}
+    .logo{width:40px;height:40px;border-radius:12px;background:conic-gradient(from 200deg,var(--coral),var(--sun) 35%,var(--brand-2) 70%,var(--brand));box-shadow:var(--shadow)}
     .brand h1{font-size:18px;margin:0}
     .tag{color:var(--muted);font-size:12px}
+
     .cta{display:flex;gap:10px}
-    .btn{padding:12px 16px;border-radius:14px;background:#1f2937;border:1px solid rgba(255,255,255,.08);transition:.2s ease;display:inline-flex;align-items:center;gap:10px}
+    .btn{padding:12px 16px;border-radius:14px;background:#ffffff;border:1px solid var(--line);transition:.2s ease;display:inline-flex;align-items:center;gap:10px; box-shadow:0 1px 0 rgba(2,6,23,.04)}
     .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
-    .btn.primary{background:var(--brand);color:#150b0c;border:none}
+    .btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:white;border:none}
 
     .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:40px 0}
     .hero h2{font-size:40px;line-height:1.1;margin:.2em 0}
     .hero p{color:var(--muted);margin:0 0 18px}
-    .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;font-size:12px}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(20,184,166,.08);border:1px solid rgba(20,184,166,.2);padding:8px 12px;border-radius:999px;font-size:12px;color:#0f766e}
+
     .glow{position:relative}
-    .glow:after{content:"";position:absolute;inset:-2px;border-radius:calc(var(--radius) + 6px);background:radial-gradient(300px 80px at 20% 10%,rgba(255,90,95,.35),transparent 60%),radial-gradient(240px 80px at 80% 90%,rgba(34,197,94,.25),transparent 60%);filter:blur(30px);z-index:-1}
-    .shot{background:linear-gradient(180deg,#0e1626,#0a0f17);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:14px}
+    .glow:after{content:"";position:absolute;inset:-2px;border-radius:calc(var(--radius) + 6px);background:radial-gradient(320px 90px at 20% 10%,rgba(34,211,238,.25),transparent 60%),radial-gradient(260px 90px at 80% 90%,rgba(245,158,11,.2),transparent 60%);filter:blur(30px);z-index:-1}
+    .shot{background:linear-gradient(180deg,#ffffff,#f1f5f9);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
 
     .section{padding:36px 0}
+
     .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .kpi{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:20px}
+    .kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
     .kpi span{display:block;color:var(--muted);font-size:12px}
-    .kpi strong{display:block;font-size:28px;margin-top:6px}
+    .kpi strong{display:block;font-size:28px;margin-top:6px;color:#0b1320}
 
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
     .card .body{padding:14px 16px}
     .card h3{margin:0 0 6px}
-    .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#091016;background:#e5e7eb;border-radius:999px;padding:4px 8px}
+    .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#075985;background:#e0f2fe;border-radius:999px;padding:4px 8px}
 
     .about{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-    .about .box{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:20px}
+    .about .box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
 
     .faq{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    details{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:16px}
+    details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
     summary{cursor:pointer;font-weight:600}
     details p{color:var(--muted)}
 
     footer{padding:40px 0;color:var(--muted);text-align:center}
-    .sig{opacity:.8;font-size:12px;margin-top:8px}
+    .sig{opacity:.9;font-size:12px;margin-top:8px}
 
     @media (max-width:980px){
-      .hero{grid-template-columns:1fr;}
+      .hero{grid-template-columns:1fr}
       .about{grid-template-columns:1fr}
       .kpis{grid-template-columns:1fr 1fr}
       .grid{grid-template-columns:1fr 1fr}
@@ -103,7 +112,9 @@
   <header>
     <div class="wrap nav">
       <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
+        <div class="logo" aria-hidden="true">
+          <img src="imagem.png">
+        </div>
         <div>
           <h1>Flip Reformas</h1>
           <div class="tag">por Milla Padua · Zona Sul do Rio</div>
@@ -111,7 +122,7 @@
       </div>
       <nav class="cta">
         <!-- SUBSTITUA os hrefs abaixo pelos seus links reais -->
-        <a class="btn primary" href="https://wa.me/5521XXXXXXXXX" target="_blank" rel="noopener">
+        <a class="btn primary" href="https://wa.me/5521965348756" target="_blank" rel="noopener">
           <!-- WhatsApp Icon -->
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0 0 12 .06 11.94 11.94 0 0 0 3.48 3.48a11.94 11.94 0 0 0-3.42 8.52c0 2.1.54 4.14 1.56 5.94L.06 24l6.18-1.5a12.1 12.1 0 0 0 5.76 1.44 11.94 11.94 0 0 0 8.52-3.42 11.94 11.94 0 0 0 3.42-8.52 11.94 11.94 0 0 0-3.42-8.52Zm-8.52 18c-1.86 0-3.66-.48-5.28-1.38l-.38-.22-3.66.9.96-3.54-.24-.36a9.8 9.8 0 0 1-1.5-5.22c0-5.4 4.38-9.78 9.78-9.78s9.78 4.38 9.78 9.78-4.38 9.78-9.78 9.78Zm5.58-7.26c-.3-.18-1.74-.84-2-.96-.24-.12-.42-.18-.6.18-.18.36-.72 1-.9 1.2-.18.18-.36.24-.66.06-.3-.18-1.26-.48-2.4-1.5-.9-.78-1.5-1.74-1.68-2.04-.18-.3-.02-.46.16-.64.16-.16.36-.42.54-.6.18-.18.24-.3.36-.48.12-.18.06-.36-.06-.54-.18-.18-.6-1.44-.84-1.98-.22-.54-.45-.48-.66-.48h-.54c-.18 0-.48.06-.72.36s-.96.96-.96 2.34 1 2.7 1.14 2.88c.18.24 1.98 3.12 4.8 4.38.67.3 1.2.48 1.62.6.68.22 1.3.18 1.8.12.54-.06 1.74-.72 1.98-1.38.24-.66.24-1.2.18-1.32-.06-.12-.24-.18-.54-.36Z" fill="currentColor"/></svg>
           Falar no WhatsApp
@@ -130,12 +141,12 @@
     <section class="hero">
       <div>
         <div class="pill">Reformas completas · Autenticidade que acolhe</div>
-        <h2>De apê cansado a <span style="background:linear-gradient(90deg,var(--brand),#ffd6cc);-webkit-background-clip:text;background-clip:text;color:transparent">lar dos sonhos</span>.</h2>
+        <h2>De apê cansado a <span style="background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">lar dos sonhos</span>.</h2>
         <p>
           Na <strong>Flip Reformas</strong>, a arquiteta <strong>Milla Padua</strong> resgata apartamentos em condições ruins e entrega ambientes funcionais, iluminados e cheios de personalidade. Cada obra recebe um apelido carinhoso — os famosos <em>Flips</em> — como o <strong>Flip Vistão</strong>, <strong>Flip Mofadão</strong> e <strong>Flip Selva</strong>.
         </p>
         <div class="cta" style="margin-top:12px">
-          <a class="btn primary" href="https://wa.me/5521XXXXXXXXX" target="_blank" rel="noopener">Quero conversar no WhatsApp</a>
+          <a class="btn primary" href="https://wa.me/5521965348756" target="_blank" rel="noopener">Quero conversar no WhatsApp</a>
           <a class="btn" href="https://instagram.com/flipreformas" target="_blank" rel="noopener">Ver os Flips no Instagram</a>
         </div>
       </div>
@@ -167,7 +178,7 @@
           </div>
         </article>
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1556912998-6a321d3ada5c?q=80&w=1600&auto=format&fit=crop" alt="Cozinha clara com marcenaria e iluminação quente" />
+          <img src="https://sdmntprwestus3.oaiusercontent.com/files/00000000-4df0-61fd-a0da-b15ba6e04dbc/raw?se=2025-08-12T00%3A33%3A19Z&sp=r&sv=2024-08-04&sr=b&scid=67cfe630-c99a-5a36-92e0-269c39f7a048&skoid=71e8fa5c-90a9-4c17-827b-14c3005164d6&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-11T19%3A06%3A46Z&ske=2025-08-12T19%3A06%3A46Z&sks=b&skv=2024-08-04&sig=x//mJvOn85lhe0M/yP6CRJKvRcMllnuTrxK0rBTLry4%3D" alt="Cozinha clara com marcenaria e iluminação quente" />
           <div class="body">
             <h3>Flip Mofadão</h3>
             <div class="badge">resgate sanitário</div>
@@ -206,7 +217,7 @@
           <li><strong>Entrega:</strong> limpeza fina, décor e manual do lar.</li>
         </ol>
         <div class="cta" style="margin-top:8px">
-          <a class="btn primary" href="https://wa.me/5521XXXXXXXXX" target="_blank" rel="noopener">Quero meu Flip</a>
+          <a class="btn primary" href="https://wa.me/5521965348756" target="_blank" rel="noopener">Quero meu Flip</a>
           <a class="btn" href="https://instagram.com/flipreformas" target="_blank" rel="noopener">Ver bastidores</a>
         </div>
       </div>
@@ -232,29 +243,6 @@
       </div>
     </section>
 
-    <!-- FAQ rápido -->
-    <section class="section">
-      <h2 style="margin:0 0 10px">Dúvidas frequentes</h2>
-      <div class="faq">
-        <details>
-          <summary>Atende somente na Zona Sul?</summary>
-          <p>O foco é Zona Sul do Rio por logística e rede de fornecedores. Projetos especiais podem ser avaliados.</p>
-        </details>
-        <details>
-          <summary>É possível financiar a reforma?</summary>
-          <p>Depende do banco e do perfil do imóvel. No orçamento inicial indicamos caminhos e parceiros.</p>
-        </details>
-        <details>
-          <summary>Quanto tempo leva?</summary>
-          <p>Varia conforme o escopo. Em média, <strong>90–120 dias</strong> do fechamento à entrega com décor.</p>
-        </details>
-        <details>
-          <summary>Posso agendar uma visita técnica?</summary>
-          <p>Claro! Fale com a Milla no WhatsApp e combinamos uma primeira avaliação.</p>
-        </details>
-      </div>
-    </section>
-
     <!-- CTA final -->
     <section class="section">
       <div class="shot" style="display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center">
@@ -262,7 +250,7 @@
           <h2 style="margin-top:0">Bora começar seu Flip?</h2>
           <p style="color:var(--muted)">Manda um "Oi" e já alinhamos diagnóstico, prazos e orçamento. Simples, humano e sem enrolação.</p>
           <div class="cta" style="margin-top:12px">
-            <a class="btn primary" href="https://wa.me/5521XXXXXXXXX" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+            <a class="btn primary" href="https://wa.me/5521965348756" target="_blank" rel="noopener">Chamar no WhatsApp</a>
             <a class="btn" href="https://instagram.com/flipreformas" target="_blank" rel="noopener">@flipreformas</a>
           </div>
         </div>
